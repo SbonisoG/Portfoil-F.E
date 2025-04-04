@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  /* background-image: url(../Portfoil-F.E/images/pexels-aritra-hazra-249157205-31385969.jpg);
+  background-size: cover;
+  background-position: center; */
+}
+
+header {
+  /* background-color: #f5f2f2c2; */
+  padding: 0 2rem;
+  position: relative;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  top: 0;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #917e52;
+}
+
+li {
+  /* display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 20px; */
+  list-style: none;
+  /* border-bottom: 1px solid black;
+  border-radius: 2px; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  /* padding: 10px;
+  margin-right: 20px;
+  border-bottom: 1px solid black;
+  border-radius: 2px; */
+}
+
+a:hover {
+  color: #917e52;
+  font-weight: 600;
+}
+
+header .links {
+  display: flex;
+  gap: 2rem;
+}
+
+header .toggle_btn {
+  color: #917e52;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+header .dwnload_btn {
+  background-color: #917e52;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .dwnload_btn:hover {
+  background-color: #917e52b9;
+  scale: 1.01;
+  color: black;
+}
+/*DROPDOWN MENU*/
+.dropdown_mn {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background-color: rgb(145, 126, 82, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_mn.open {
+  height: 240px;
+}
+
+.dropdown_mn li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_mn .dwnload_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*Responsive Section*/
+@media (max-width: 992px) {
+  header .links,
+  header .dwnload_btn {
+    display: none;
+  }
+
+  header .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_mn {
+    display: block;
+  }
+}
+
+@media (max-width: 574px) {
+  .dropdown_mn {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+/*Hero section*/
+.mn-content {
+  height: calc(100vh - 60px);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.min-context {
+  transform: translateY(-30%);
+}
+
+.min-context h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 10px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 1.4rem;
+}
+
+.min-context h3 {
+  font-size: 32px;
+  font-weight: 500;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+}
+
+.min-context p {
+  font-size: 12px;
+  width: 550px;
+  font-weight: 300;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  line-height: 1.1rem;
+}
+
+.about {
+  height: 100vh;
+}
